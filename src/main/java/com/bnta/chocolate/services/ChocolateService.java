@@ -18,8 +18,8 @@ public class ChocolateService {
         return chocolateRepository.findAll();
     }
 
-    public List<Chocolate> getChocolatesGreaterThanCocoa(int percent){
-        return chocolateRepository.findByCocoaPercentageGreaterThan(percent);
+    public List<Chocolate> getChocolatesGreaterThanCocoa(int cocoaPercentage){
+        return chocolateRepository.findByCocoaPercentageGreaterThanEqual(cocoaPercentage);
     }
 
     public Chocolate addChocolate(Chocolate chocolate){
