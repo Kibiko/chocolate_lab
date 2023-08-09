@@ -46,20 +46,43 @@ public class Dataloader implements ApplicationRunner {
         Estate duffys = new Estate("duffy's","england");
         Estate whitakers = new Estate("whitakers","england");
 
-        chocolateRepository.save(new Chocolate("bounty",0,duffys));
-        chocolateRepository.save(new Chocolate("mars",0,whitakers));
-        chocolateRepository.save(new Chocolate("caramel lux",10,charbonnelAndWalker));
-        chocolateRepository.save(new Chocolate("rum turtle",40,montezumas));
-        chocolateRepository.save(new Chocolate("nut bar",2,houseOfDorchester));
-        chocolateRepository.save(new Chocolate("cocoa haven",80,aphroditeChocolates));
+        estateRepository.saveAll(Arrays.asList(
+                houseOfDorchester,
+                montezumas,
+                aphroditeChocolates,
+                charbonnelAndWalker,
+                duffys,
+                whitakers
+        ));
 
-//        chocolateRepository.save(new Chocolate("coconutto",0,duffys));
-//        chocolateRepository.save(new Chocolate("twix",0,whitakers));
-//        chocolateRepository.save(new Chocolate("caramel classic",20,charbonnelAndWalker));
-//        chocolateRepository.save(new Chocolate("rum bear",50,montezumas));
-//        chocolateRepository.save(new Chocolate("almond bar",1,houseOfDorchester));
-//        chocolateRepository.save(new Chocolate("cocoa haven plus",95,aphroditeChocolates));
+        Chocolate chocolate1 = new Chocolate("bounty",0,duffys);
+        Chocolate chocolate2 = new Chocolate("mars",0,whitakers);
+        Chocolate chocolate3 = new Chocolate("caramel lux",10,charbonnelAndWalker);
+        Chocolate chocolate4 = new Chocolate("rum turtle",40,montezumas);
+        Chocolate chocolate5 = new Chocolate("nut bar",2,houseOfDorchester);
+        Chocolate chocolate6 = new Chocolate("cocoa haven",80,aphroditeChocolates);
 
+        Chocolate chocolate7 = new Chocolate("coconutto",0,duffys);
+        Chocolate chocolate8 = new Chocolate("twix",0,whitakers);
+        Chocolate chocolate9 = new Chocolate("caramel classic",20,charbonnelAndWalker);
+        Chocolate chocolate10 = new Chocolate("rum bear",50,montezumas);
+        Chocolate chocolate11 = new Chocolate("almond bar",1,houseOfDorchester);
+        Chocolate chocolate12 = new Chocolate("cocoa haven plus",95,aphroditeChocolates);
+
+        chocolateRepository.saveAll(Arrays.asList(
+                chocolate1,
+                chocolate2,
+                chocolate3,
+                chocolate4,
+                chocolate5,
+                chocolate6,
+                chocolate7,
+                chocolate8,
+                chocolate9,
+                chocolate10,
+                chocolate11,
+                chocolate12
+        ));
 
     }
 }

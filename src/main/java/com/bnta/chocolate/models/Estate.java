@@ -19,7 +19,7 @@ public class Estate {
     @Column
     private String country;
 
-    @OneToMany(mappedBy = "estate")
+    @OneToMany(mappedBy = "estate", cascade = CascadeType.ALL)
     @JsonIgnoreProperties({"estate"})
     private List<Chocolate> chocolates;
 

@@ -17,7 +17,7 @@ public class Chocolate {
     @Column
     private int cocoaPercentage;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "estate_id", nullable = false) //chocolate must have an estate
     @JsonIgnoreProperties({"chocolates"})
     private Estate estate;
